@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*body definiran u px jer će se kasnije mijenjati zbog responzivnog dizajna*/
+body{
+    font-size: 16px;
+}
+/*početna stranica*/
+#home{
+    height: 100vh;
+    background: linear-gradient(rgba(182, 148, 39, 0.2), rgba(34, 34, 134, 0.2)), 
+      url("./slike/smokva\ i\ sunce.jpg")  center center/cover ;   
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.nav-bottom-border{
+    border-bottom: rgb(155, 177, 31) solid 1px;
+}
+
+.nav-header{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+   
+    /*logo*/
+    h2{
+        font-family: 'Dancing Script', cursive;
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 50%;
+        padding: 10px;
+        height: 70px;
+        width: 70px;
+        border: rgb(0, 0, 0) 1px solid;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.8);
+        span{
+            font-family: 'Dancing Script', cursive;
+            text-transform: capitalize;
+            font-weight: 800; 
+            color: rgb(158, 0, 0);  
+        }
+    }
+}
+
+/*toggle u nav-u*/
+.toggle{
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color:rgb(155, 177, 31);
+    transition: all 0.3s linear;
+    &:hover{
+        transform: rotate(90deg);
+    }
+}
+/*centralni div-dobrodošli*/
+.welcome-div{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+
+}
+.container{
+    padding: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    height: 50%;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.7));
+    h1{
+        font-size: 1.7em;
+    }
+    p{
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em;
+        padding: 5% 0 5%;
+    }
+    .link{
+        border: rgba(255, 255, 255, 0.3) solid 1px;
+        border-radius: 5px;
+        padding: 0.3em;
+        &:hover{ 
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+            background-color: transparent;
+            
+        }
+    }
+}
+/*linkovi u nav-u i centralnom divu*/
+ul{
+    padding-left: 0.5em;
+
+}
+ul li{
+   list-style-type: none; 
+   padding: 0.5em;
+}
+.link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    padding: 0.2em;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(24, 24, 24);
+    transition: all 0.1s linear;
+    &:hover{
+        background-color: rgba(136, 156, 18, 0.521);
+        color: white;
+    }
+}
+.shop-btn{
+    background-color: transparent;
+    border: none;
+    color:rgb(24, 24, 24);
+}
+
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: all 1s linear;
+}
+.show-links{
+    height: auto;
+    width: 200px;
+    overflow: auto;
+
+}
+
+/*sectioni-o nama, naši proizvodi, kontakt*/
+.section{
+    width: 80%;
+    margin: 0 auto 2em;
+    text-align: justify;
+    h2{
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 2em;
+        padding-bottom: 0.5em;
+    }
+    img{
+        float: left;
+        margin: 0 1em 1em 0;
+        clear: both;
+        border-radius: 5px;
+    }
+}
+/*naši proizvodi*/
+/*kontejner za vrste proizvoda*/
+.products-type-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*pojedina vrsta proizvoda*/
+.product-type-base{
+    transition: all 0.2s linear;
+}
+/*za povećanje basea mouseoverom*/
+.product-type-base-scale{
+    transform: scale(1.05);
+
+}
+.product-type{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.product-type-name{
+    text-align: center;
+    font-weight: 400;
+}
+.product-type-photo-div{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.hide-products{
+    height: 0;
+    overflow: hidden;
+}
+
+.show-products{
+    overflow: auto;
+    text-align: center;
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 49, 116, 0.288);
+    border-radius: 10px;
+        a{
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+    }   
+}
+
+.product-type-text{
+    height: 0;
+    transition: all 0.2s linear;
+    overflow: hidden;
+}
+.product-type-text-show{
+    height: auto;
+    overflow: auto;
+    padding-top: 10px;
+
+    
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////7
+.shop-main{
+    height: 90%;
+    width: 100%;
+    margin: 0;
+    transform: translateY(10%);
+    background: linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.7));
+    border-radius: 10px;
+    overflow-y: scroll; 
+    display: flex; 
+    
+}
+.shop-main::-webkit-scrollbar {
+    width: 1.5vw;
+  }
+
+.shop-main::-webkit-scrollbar-track {
+    background-color: #dadada;
+    border-radius: 100px;
+}
+  
+  .shop-main::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 6px solid rgba(0, 0, 0, 0.18);
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(202, 173, 8);
+  }
+.shop-products-btn{
+    background-color: transparent;
+    border: rgb(202, 173, 8) solid 2px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: capitalize;
+    margin: 0.5em;
+    &:hover{
+        background-color:white;
+        
+    }
+}
+.shop-products{
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.shop-products-btns{
+    text-align: center;
+    padding: 1em;
+}
+.showed-items{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content:space-around;
+}
+.shop-item{
+    width: 450px;
+    display: flex;
+    padding: 1em;
+    .item-info{
+        padding-left: 1em;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+        border-bottom: dotted rgb(202, 173, 8) 2px;
+    }
+    .item-text{
+        padding-top: 1em;
+        font-size: 0.9em;
+    }
+    img{
+        border: rgb(202, 173, 8) solid 1px;
+        border-radius: 10px;
+    }
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 15px;
+    }
+}
+.shop-products-btn-container{
+    text-align: end;
+}
+.add-to-chart-btn{
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+/*KOŠARICA*/
+.shop-basket-container{
+    height: 80%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 5% auto;
+    border-radius: 20px;
+    position: relative;
+    border: solid 1px rgb(202, 173, 8) ;
+    box-shadow: 1px 1px rgb(161, 161, 161)
+    ;
+}
+.basket-main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 80%;  
+    justify-content: flex-start;
+    overflow-y: auto;  
+}
+.basket-main::-webkit-scrollbar {
+    width: 0.5vw;
+  }
+
+.basket-main::-webkit-scrollbar-track {
+    background-color: #dadada;
+    border-radius: 100px;
+}
+  
+.basket-main::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 6px solid rgba(0, 0, 0, 0.18);
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(202, 173, 8);
+}
+.shop-basket{
+    flex-basis: 30%;
+
+}
+.basket-header{
+    
+    text-align: center;
+    padding: 0.5em;
+    border-bottom: solid 1px rgb(202, 173, 8) ;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.item-in-basket{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5em;
+}
+.input-amount{
+    width: 50px;
+    text-align: center;
+}
+.name-item-in-basket{
+    width: 15%;
+}
+.total{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    border-top: solid 1px rgb(202, 173, 8);
+    padding-top: 1em;
+}
+.trash-item{
+    color: rgb(243, 102, 102);
+    background: transparent;
+    border: none;
+    &:hover{
+        color: rgb(233, 35, 35);
+    }
+}
+
+
+
+/*za uređaje manje od 900px*/
+@media (max-width: 900px) {
+    .container{
+        width: 55%;
+        height: 60%;
+    }  
+}
+
+/*za uređaje manje od 600px*/
+@media (max-width: 600px) {
+    .container{
+        width: 55%;
+        height: 50%;
+    }
+    body{
+        font-size: 12px;
+    }
+    .section img{
+        width: 100%;
+    }
+    
+}
